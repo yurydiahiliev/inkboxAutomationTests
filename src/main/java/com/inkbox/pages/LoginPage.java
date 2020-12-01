@@ -6,7 +6,6 @@ import com.inkbox.utils.WaitElementTimeout;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static com.inkbox.utils.WaitUtils.waitUntilDisplayed;
 import static com.inkbox.utils.WaitUtils.waitUntilHidden;
 
 public class LoginPage extends BasePage {
@@ -17,7 +16,6 @@ public class LoginPage extends BasePage {
 
     @Step
     public MainPage loginAsUser(User user) {
-//        waitUntilDisplayed(userEmailInput, WaitElementTimeout.MEDIUM);
         userEmailInput.setValue(user.getUserEmail());
         userPasswordInput.setValue(user.getUserPassword());
         logInButton.click();

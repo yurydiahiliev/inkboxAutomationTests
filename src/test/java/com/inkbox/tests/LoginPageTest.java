@@ -5,7 +5,6 @@ import com.inkbox.pages.BlockContentBanner;
 import com.inkbox.pages.HeaderNavBar;
 import com.inkbox.pages.LoginPage;
 import com.inkbox.pages.MainPage;
-import com.inkbox.pages.SignUpPage;
 import org.testng.annotations.Test;
 
 import static com.inkbox.pages.BasePage.at;
