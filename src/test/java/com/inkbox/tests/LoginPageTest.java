@@ -21,14 +21,10 @@ public class LoginPageTest extends BaseTest {
     public void checkUserCanLoginToSystem() {
         HeaderNavBar headerNavBar = open(MainPage.class).headerNavBar;
 
-        LoginPage loginPage = open(MainPage.class)
-                .headerNavBar
-                .clickOnHeaderUserLink();
+        LoginPage loginPage = headerNavBar.clickOnHeaderUserLink().clickOnLoginLink();
 
         at(BlockContentBanner.class).closeBlockBanner();
         headerNavBar.clickOnHeaderUserLink();
-
-        at(SignUpPage.class).clickOnLoginLink();
 
         String headerUserText = loginPage
                 .loginAsUser(user)

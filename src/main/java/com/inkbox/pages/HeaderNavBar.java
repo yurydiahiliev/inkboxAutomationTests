@@ -12,10 +12,10 @@ public class HeaderNavBar extends BasePage {
     private SelenideElement headerUserLink = $("#header-user button");
 
     @Step
-    public LoginPage clickOnHeaderUserLink() {
+    public SignUpPage clickOnHeaderUserLink() {
         waitUntilDisplayed(headerUserLink, MEDIUM);
         headerUserLink.click();
-        return new LoginPage();
+        return new SignUpPage();
     }
 
     @Step
